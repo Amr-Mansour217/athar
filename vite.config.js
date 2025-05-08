@@ -184,6 +184,9 @@ logger.error = (msg, options) => {
 export default defineConfig({
 	plugins: [react()],
 	base: '/',
+	    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
 	build: {
 		outDir: 'dist',
 		assetsDir: 'assets',
