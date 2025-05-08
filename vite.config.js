@@ -185,23 +185,16 @@ export default defineConfig({
 	customLogger: logger,
 	plugins: [react(), addTransformIndexHtml],
 	server: {
-		cors: {
-			origin: '*',
-			methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-			credentials: true
-		},
+		cors: true,
 		headers: {
-			'Access-Control-Allow-Origin': '*',
-			'Cross-Origin-Embedder-Policy': 'require-corp',
-			'Cross-Origin-Opener-Policy': 'same-origin'
+			'Cross-Origin-Embedder-Policy': 'credentialless',
 		},
-		allowedHosts: 'all'
+		allowedHosts: true,
 	},
 	resolve: {
-		extensions: ['.jsx', '.js', '.tsx', '.ts', '.json'],
+		extensions: ['.jsx', '.js', '.tsx', '.ts', '.json', ],
 		alias: {
 			'@': path.resolve(__dirname, './src'),
 		},
 	},
-	base: './'
 });
