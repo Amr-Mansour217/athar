@@ -182,28 +182,11 @@ logger.error = (msg, options) => {
 }
 
 export default defineConfig({
-<<<<<<< HEAD
 	plugins: [react()],
-	base: '/athar/',
+	base: './',
 	build: {
-		outDir: 'dist'
+		outDir: 'dist',
+		assetsDir: 'assets',
+		sourcemap: true
 	}
-=======
-	customLogger: logger,
-	plugins: [react(), addTransformIndexHtml],
-	base: '/',
-	server: {
-		cors: true,
-		headers: {
-			'Cross-Origin-Embedder-Policy': 'credentialless',
-		},
-		allowedHosts: true,
-	},
-	resolve: {
-		extensions: ['.jsx', '.js', '.tsx', '.ts', '.json', ],
-		alias: {
-			'@': path.resolve(__dirname, './src'),
-		},
-	},
->>>>>>> c78fad1d35667949802036d2c65aebf0df2f7d8c
 });
