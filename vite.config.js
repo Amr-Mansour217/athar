@@ -186,15 +186,15 @@ export default defineConfig({
 	plugins: [react(), addTransformIndexHtml],
 	server: {
 		cors: true,
-		headers: {
-			'Cross-Origin-Embedder-Policy': 'credentialless',
-		},
-		allowedHosts: true,
 	},
-	resolve: {
-		extensions: ['.jsx', '.js', '.tsx', '.ts', '.json', ],
-		alias: {
-			'@': path.resolve(__dirname, './src'),
-		},
-	},
+	base: '/athar/',
+	build: {
+		outDir: 'dist',
+		assetsDir: 'assets',
+		rollupOptions: {
+			output: {
+				manualChunks: undefined
+			}
+		}
+	}
 });
