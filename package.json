@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://[your-github-username].github.io/[your-repo-name]",
+  "homepage": "https://amr-mansour217.github.io/athar",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
